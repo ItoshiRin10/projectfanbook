@@ -11,9 +11,9 @@ DB_NAME = os.environ.get("dbsparta")
 client = MongoClient(
     'mongodb+srv://test:sparta@cluster0.shqfp2i.mongodb.net/?retryWrites=true&w=majority')
 db = client.dbsparta
-app = Flask(_name_)
+app = Flask(__name__)
 
-dotenv_path = join(dirname(_file_), '.env')
+dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
 @app.route('/')
